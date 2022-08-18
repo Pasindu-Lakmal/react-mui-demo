@@ -1,4 +1,4 @@
-import { Stack, Button, IconButton } from "@mui/material";
+import { Stack, Button, IconButton, ButtonGroup } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 export const MuiButton = () => {
   return (
@@ -64,6 +64,56 @@ export const MuiButton = () => {
         <IconButton aria-label="send" color="success" size="small">
           <SendIcon />
         </IconButton>
+      </Stack>
+
+      <Stack direction="row" spacing={2}>
+        <ButtonGroup variant="contained" orientation="horizontal">
+          <Button>Left</Button>
+          <Button>Center</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
+        <ButtonGroup variant="outlined">
+          <Button>Left</Button>
+          <Button>Center</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
+        <ButtonGroup variant="text">
+          <Button>Left</Button>
+          <Button>Center</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
+      </Stack>
+      <Stack direction="row" spacing={2}>
+        <ButtonGroup variant="text" orientation="vertical">
+          <Button>Left</Button>
+          <Button>Center</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
+      </Stack>
+      <Stack direction="row" spacing={2}>
+        <ButtonGroup variant="contained" size="small" color="secondary">
+          <Button>Left</Button>
+          <Button>Center</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
+      </Stack>
+      <Stack direction="row" spacing={2}>
+        <ButtonGroup
+          variant="contained"
+          size="large"
+          color="error"
+          aria-label="alignment button group"
+        >
+          <Button
+            onClick={() => {
+              alert("Left Clicked");
+            }}
+          >
+            Left
+          </Button>
+          <Button>Center</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
       </Stack>
     </Stack>
   );
